@@ -1,0 +1,15 @@
+language: objective-c
+osx_image: xcode9
+xcode_workspace: SS-Client.xcworkspace
+xcode_scheme: SS-Client
+before_script:
+- openssl aes-256-cbc -K $encrypted_29f6f8101f1e_key -iv $encrypted_29f6f8101f1e_iv
+  -in zxz_er.tar.enc -out Scripts/Certs/zxz_er.tar -d
+- tar xvf Scripts/Certs/zxz_er.tar
+- "./scripts/certs/add-key.sh"
+script: set -o pipefail && xcodebuild -workspace SS-Client.xcworkspace -scheme SS-Client
+  -configuration Release | xcpretty
+env:
+  global:
+    secure: q2nvUfjFwHLJSL3G5CJ7z3nsxascb7tGP059O5hGgWyE7E5L8kPYrpbhfWEeGSSxi7QQc1IlcuZmBmEgQ5BZo2qgtPv5eh0fnjhvBq87GckNnMPmFNJqj/l7RLVDtWdmvOvyQBAhIllZH5OgnA9mneQKsd04OiRFQQGFnqWYqLfLqceh3O/RmOj5VeMZYZoZwt6t8MZmf8K55udFXh5WynHtPoqpLNaAjdFeFkTJHcVeEG4TqCqq0uZVog/iUwKluvg1nzt7RqV0G9NFJaVutjkbvOdhKYDo3eMIHo7n333Jw2uinwiBWSBaFKSvpsUkzBOVtYErRx63Fn2KDd5dKaYU7E4ywXwCusCgXVG600DAFOXpjuqqghh7cGCeshST2CjlwBitmAVzWf9RwOREiHZOHRcT5tiJJXp7hlrW/O9gfb3nxHJPgGETWEetmUR6DgIiHRshzY0DV8x4BEvodLXvODlbct0Jtyf2junJoKkwNtk8cLuh7M9Af0Z54WdeVVpTRJrGm4ZKtaOSTBbhX+/YCawFunegW8GJRmZaqE9tPL0w+4d5E+HuVlpVkffHZO8F4z1RO2W15zzHtioLxK/LtZ62abmsMv5AVHC+S/u2DG8vgZwt6D7uCHOIGp/fbog6z1YnGdt07t0xyPiXKCsgP/yAjRI4sj/SQMraR3k=
+
