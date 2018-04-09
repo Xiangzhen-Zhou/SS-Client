@@ -150,27 +150,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		43680F70C20BB3F69F4DCCC68B58BC7D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53DC4EB354A2A0834A43C07F662207FD /* Pods-SS-Client.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 11.13;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		6D8AD198EDB5D59562779742AF85B894 /* Release */ = {
+		07EDF394B3B8D6D7C75857F421A218B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FBBAA3657E2229450DF9E92B2E2EC432 /* Pods-SS-Client.release.xcconfig */;
 			buildSettings = {
@@ -180,7 +160,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 11.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -190,7 +170,27 @@
 			};
 			name = Release;
 		};
-		B15CA60418736119DEC70EB452A4424A /* Release */ = {
+		6A6A3D50E18528997EE2F03E3C9D8D09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53DC4EB354A2A0834A43C07F662207FD /* Pods-SS-Client.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C4D8B0A6AD4EF0183B7B90C84630289B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
@@ -245,7 +245,7 @@
 			};
 			name = Release;
 		};
-		CF68B166437887E9C981389E0963B19C /* Debug */ = {
+		ED3BC417A9BAAB2DFA8DA863F8CA89C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -294,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -311,8 +311,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF68B166437887E9C981389E0963B19C /* Debug */,
-				B15CA60418736119DEC70EB452A4424A /* Release */,
+				ED3BC417A9BAAB2DFA8DA863F8CA89C0 /* Debug */,
+				C4D8B0A6AD4EF0183B7B90C84630289B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -320,8 +320,8 @@
 		86C70F50498BDBEFDFBDC188AA65C615 /* Build configuration list for PBXNativeTarget "Pods-SS-Client" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				43680F70C20BB3F69F4DCCC68B58BC7D /* Debug */,
-				6D8AD198EDB5D59562779742AF85B894 /* Release */,
+				6A6A3D50E18528997EE2F03E3C9D8D09 /* Debug */,
+				07EDF394B3B8D6D7C75857F421A218B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
