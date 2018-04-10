@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5DF0639A207B9C9C00790148 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF06399207B9C9C00790148 /* AppDelegate.m */; };
-		5DF0639C207B9C9C00790148 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DF0639B207B9C9C00790148 /* Assets.xcassets */; };
 		5DF0639F207B9C9C00790148 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DF0639D207B9C9C00790148 /* MainMenu.xib */; };
 		5DF063A2207B9C9C00790148 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF063A1207B9C9C00790148 /* main.m */; };
 /* End PBXBuildFile section */
@@ -17,7 +16,6 @@
 		5DF06395207B9C9C00790148 /* LaunchHelperTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchHelperTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF06398207B9C9C00790148 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5DF06399207B9C9C00790148 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5DF0639B207B9C9C00790148 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DF0639E207B9C9C00790148 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5DF063A0207B9C9C00790148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DF063A1207B9C9C00790148 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -55,7 +53,6 @@
 			children = (
 				5DF06398207B9C9C00790148 /* AppDelegate.h */,
 				5DF06399207B9C9C00790148 /* AppDelegate.m */,
-				5DF0639B207B9C9C00790148 /* Assets.xcassets */,
 				5DF0639D207B9C9C00790148 /* MainMenu.xib */,
 				5DF063A0207B9C9C00790148 /* Info.plist */,
 				5DF063A1207B9C9C00790148 /* main.m */,
@@ -126,7 +123,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DF0639C207B9C9C00790148 /* Assets.xcassets in Resources */,
 				5DF0639F207B9C9C00790148 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
