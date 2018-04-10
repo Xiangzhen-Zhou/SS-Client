@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		04B885438018EA155BF8E749 /* libPods-SS-Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E90876A01F3A18BF9FCC30AA /* libPods-SS-Client.a */; };
+		5D5CDC72207CFC190053DD36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CDC71207CFC190053DD36 /* main.m */; };
+		5D5CDC79207CFD490053DD36 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D5CDC78207CFD490053DD36 /* SystemConfiguration.framework */; };
 		5DF0638A207B9B5600790148 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF06389207B9B5600790148 /* ServiceManagement.framework */; };
 		5DF063B1207B9CBE00790148 /* LaunchHelperTool.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5DF063AE207B9CA700790148 /* LaunchHelperTool.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5DFF3FE2207B89910008D219 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF3FE1207B89910008D219 /* AppDelegate.m */; };
@@ -17,6 +19,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5D5CDC76207CFC2B0053DD36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DFF3FD5207B89900008D219 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D5CDC6E207CFC190053DD36;
+			remoteInfo = NetworkProxySetter;
+		};
 		5DF063AD207B9CA700790148 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5DF063A9207B9CA700790148 /* LaunchHelperTool.xcodeproj */;
@@ -34,6 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		5D5CDC6D207CFC190053DD36 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		5DF06387207B9A5100790148 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,6 +66,9 @@
 
 /* Begin PBXFileReference section */
 		2D7103C2ECBA68BBA22D7B11 /* Pods-SS-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SS-Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SS-Client/Pods-SS-Client.debug.xcconfig"; sourceTree = "<group>"; };
+		5D5CDC6F207CFC190053DD36 /* NetworkProxySetter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetworkProxySetter; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D5CDC71207CFC190053DD36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5D5CDC78207CFD490053DD36 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		5DF06389207B9B5600790148 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		5DF063A9207B9CA700790148 /* LaunchHelperTool.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LaunchHelperTool.xcodeproj; path = LaunchHelperTool/LaunchHelperTool.xcodeproj; sourceTree = "<group>"; };
 		5DFF3FDD207B89910008D219 /* SS-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SS-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +83,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5D5CDC6C207CFC190053DD36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D5CDC79207CFD490053DD36 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5DFF3FDA207B89910008D219 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,6 +112,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5D5CDC70207CFC190053DD36 /* NetworkProxySetter */ = {
+			isa = PBXGroup;
+			children = (
+				5D5CDC71207CFC190053DD36 /* main.m */,
+			);
+			path = NetworkProxySetter;
+			sourceTree = "<group>";
+		};
 		5DF063AA207B9CA700790148 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +133,7 @@
 			children = (
 				5DF063A9207B9CA700790148 /* LaunchHelperTool.xcodeproj */,
 				5DFF3FDF207B89910008D219 /* SS-Client */,
+				5D5CDC70207CFC190053DD36 /* NetworkProxySetter */,
 				5DFF3FDE207B89910008D219 /* Products */,
 				2D8C85F06792988E61BA80F2 /* Pods */,
 				A5CFD11342C039B795A2CECD /* Frameworks */,
@@ -106,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				5DFF3FDD207B89910008D219 /* SS-Client.app */,
+				5D5CDC6F207CFC190053DD36 /* NetworkProxySetter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +165,7 @@
 		A5CFD11342C039B795A2CECD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D5CDC78207CFD490053DD36 /* SystemConfiguration.framework */,
 				5DF06389207B9B5600790148 /* ServiceManagement.framework */,
 				E90876A01F3A18BF9FCC30AA /* libPods-SS-Client.a */,
 			);
@@ -135,6 +175,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5D5CDC6E207CFC190053DD36 /* NetworkProxySetter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D5CDC75207CFC190053DD36 /* Build configuration list for PBXNativeTarget "NetworkProxySetter" */;
+			buildPhases = (
+				5D5CDC6B207CFC190053DD36 /* Sources */,
+				5D5CDC6C207CFC190053DD36 /* Frameworks */,
+				5D5CDC6D207CFC190053DD36 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkProxySetter;
+			productName = NetworkProxySetter;
+			productReference = 5D5CDC6F207CFC190053DD36 /* NetworkProxySetter */;
+			productType = "com.apple.product-type.tool";
+		};
 		5DFF3FDC207B89910008D219 /* SS-Client */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DFF3FEE207B89910008D219 /* Build configuration list for PBXNativeTarget "SS-Client" */;
@@ -150,6 +207,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5D5CDC77207CFC2B0053DD36 /* PBXTargetDependency */,
 				5DF063B0207B9CB700790148 /* PBXTargetDependency */,
 			);
 			name = "SS-Client";
@@ -166,6 +224,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = zxzerster;
 				TargetAttributes = {
+					5D5CDC6E207CFC190053DD36 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					5DFF3FDC207B89910008D219 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
@@ -197,6 +259,7 @@
 			projectRoot = "";
 			targets = (
 				5DFF3FDC207B89910008D219 /* SS-Client */,
+				5D5CDC6E207CFC190053DD36 /* NetworkProxySetter */,
 			);
 		};
 /* End PBXProject section */
@@ -275,6 +338,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5D5CDC6B207CFC190053DD36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D5CDC72207CFC190053DD36 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5DFF3FD9207B89910008D219 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,6 +358,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5D5CDC77207CFC2B0053DD36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D5CDC6E207CFC190053DD36 /* NetworkProxySetter */;
+			targetProxy = 5D5CDC76207CFC2B0053DD36 /* PBXContainerItemProxy */;
+		};
 		5DF063B0207B9CB700790148 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LaunchHelperTool;
@@ -306,6 +382,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5D5CDC73207CFC190053DD36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2K3PAR9T8H;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5D5CDC74207CFC190053DD36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2K3PAR9T8H;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		5DFF3FEC207B89910008D219 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -446,6 +540,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5D5CDC75207CFC190053DD36 /* Build configuration list for PBXNativeTarget "NetworkProxySetter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D5CDC73207CFC190053DD36 /* Debug */,
+				5D5CDC74207CFC190053DD36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5DFF3FD8207B89900008D219 /* Build configuration list for PBXProject "SS-Client" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

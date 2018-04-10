@@ -7,29 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1ED42FBFF77345D63F2257E340024557 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
-		CD4A6C069D62C6DF7C2A0AD67BE2C476 /* Pods-SS-Client-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F814223CD55F6A51D4066B3B399E160 /* Pods-SS-Client-dummy.m */; };
+		008D88E94858B0B8190DD42951253AD2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		0A402C97D8A2855E4F69D8E2BFEE752E /* BRLOptionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3795E87ED704FF9584AC195B98F5F8 /* BRLOptionParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2545E11592C408516EA9AC047FFD47FD /* BRLOptionParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78285CC5D8C66CF0FCE081D3F30B4790 /* BRLOptionParser-dummy.m */; };
+		9B622302DDDA1881AC9ABA9EA4C81564 /* BRLOptionParser.h in Headers */ = {isa = PBXBuildFile; fileRef = B09AD2CFDBE3881404DC4448D33FD789 /* BRLOptionParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE33B3D88566571C55B5E6A9557E5E89 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		AE839E39EDA7A236C85662CDA007213D /* Pods-SS-Client-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F814223CD55F6A51D4066B3B399E160 /* Pods-SS-Client-dummy.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E3ECF2E28FEDE463A87BB51CBA1DB348 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CB2B8006B2B1ACAF9ADCA1DC82E2290;
+			remoteInfo = BRLOptionParser;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		083E4557002D2BAA1BC91D6BC8F8771D /* libPods-SS-Client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SS-Client.a"; path = "libPods-SS-Client.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F4E70B45ABE270F10257CEF49E142FD /* BRLOptionParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BRLOptionParser-prefix.pch"; sourceTree = "<group>"; };
 		2115B8EEEE5640488A927B022ACA1267 /* Pods-SS-Client-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SS-Client-resources.sh"; sourceTree = "<group>"; };
 		270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		3F814223CD55F6A51D4066B3B399E160 /* Pods-SS-Client-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SS-Client-dummy.m"; sourceTree = "<group>"; };
 		53DC4EB354A2A0834A43C07F662207FD /* Pods-SS-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SS-Client.debug.xcconfig"; sourceTree = "<group>"; };
+		5FF45B0DDC90C32686DE3A14BA65DBBC /* libPods-SS-Client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SS-Client.a"; path = "libPods-SS-Client.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75AB2D15014B2E924E67166F5044D86E /* libBRLOptionParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libBRLOptionParser.a; path = libBRLOptionParser.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		78285CC5D8C66CF0FCE081D3F30B4790 /* BRLOptionParser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BRLOptionParser-dummy.m"; sourceTree = "<group>"; };
+		7CE2F18044B4691928FC9F495055B18F /* BRLOptionParser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BRLOptionParser.xcconfig; sourceTree = "<group>"; };
 		82E1403F417C02985A96A939A167FFF6 /* Pods-SS-Client-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SS-Client-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E3795E87ED704FF9584AC195B98F5F8 /* BRLOptionParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRLOptionParser.m; path = BRLOptionParser/BRLOptionParser.m; sourceTree = "<group>"; };
+		B09AD2CFDBE3881404DC4448D33FD789 /* BRLOptionParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRLOptionParser.h; path = BRLOptionParser/BRLOptionParser.h; sourceTree = "<group>"; };
 		C203BC10BA6AF88B33B3D45E7EA19247 /* Pods-SS-Client-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SS-Client-acknowledgements.plist"; sourceTree = "<group>"; };
 		CD6F83F06729C6FA0ED78C6A7C882440 /* Pods-SS-Client-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SS-Client-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FBBAA3657E2229450DF9E92B2E2EC432 /* Pods-SS-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SS-Client.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D930033E495A867C1B1CBC026349A4F3 /* Frameworks */ = {
+		BB4DE36ED2AFBA20C2DE34A1C99C779A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ED42FBFF77345D63F2257E340024557 /* Cocoa.framework in Frameworks */,
+				AE33B3D88566571C55B5E6A9557E5E89 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8718142612A4E100493606F033235C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				008D88E94858B0B8190DD42951253AD2 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +70,17 @@
 				270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */,
 			);
 			name = "OS X";
+			sourceTree = "<group>";
+		};
+		1A7D42E75D1A9B7E58574433C6D7B3FE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CE2F18044B4691928FC9F495055B18F /* BRLOptionParser.xcconfig */,
+				78285CC5D8C66CF0FCE081D3F30B4790 /* BRLOptionParser-dummy.m */,
+				0F4E70B45ABE270F10257CEF49E142FD /* BRLOptionParser-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BRLOptionParser";
 			sourceTree = "<group>";
 		};
 		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
@@ -60,12 +99,21 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		5BFE149F7BC7DC805B01A1C6355C335B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B807170BC98654F12B393CF4620C713B /* BRLOptionParser */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
-				D8989945F558FD6BA6A7C67F69959004 /* Products */,
+				5BFE149F7BC7DC805B01A1C6355C335B /* Pods */,
+				B7B90D1DEEF24069EC58031745299506 /* Products */,
 				49353F82DE6BFF6472EB68868EF719B2 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -85,31 +133,72 @@
 			path = "Target Support Files/Pods-SS-Client";
 			sourceTree = "<group>";
 		};
-		D8989945F558FD6BA6A7C67F69959004 /* Products */ = {
+		B7B90D1DEEF24069EC58031745299506 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				083E4557002D2BAA1BC91D6BC8F8771D /* libPods-SS-Client.a */,
+				75AB2D15014B2E924E67166F5044D86E /* libBRLOptionParser.a */,
+				5FF45B0DDC90C32686DE3A14BA65DBBC /* libPods-SS-Client.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B807170BC98654F12B393CF4620C713B /* BRLOptionParser */ = {
+			isa = PBXGroup;
+			children = (
+				B09AD2CFDBE3881404DC4448D33FD789 /* BRLOptionParser.h */,
+				9E3795E87ED704FF9584AC195B98F5F8 /* BRLOptionParser.m */,
+				1A7D42E75D1A9B7E58574433C6D7B3FE /* Support Files */,
+			);
+			name = BRLOptionParser;
+			path = BRLOptionParser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		D6D75A22098E62174AFAD752CA5F6BEC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B622302DDDA1881AC9ABA9EA4C81564 /* BRLOptionParser.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		A8792FF63B5704A35FF2F236E45A9C72 /* Pods-SS-Client */ = {
+		196E4E11880A657DA268673354A09120 /* Pods-SS-Client */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 86C70F50498BDBEFDFBDC188AA65C615 /* Build configuration list for PBXNativeTarget "Pods-SS-Client" */;
+			buildConfigurationList = 68A53EDC6147EC49B60C3EB20BAC4C7A /* Build configuration list for PBXNativeTarget "Pods-SS-Client" */;
 			buildPhases = (
-				4D9FD108EB652C7D8919253C9AC11992 /* Sources */,
-				D930033E495A867C1B1CBC026349A4F3 /* Frameworks */,
+				D505E00C7808FE34B11126BCC25A1B49 /* Sources */,
+				BB4DE36ED2AFBA20C2DE34A1C99C779A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8CDFC0F76FA7EF72DCEF785350A45F5 /* PBXTargetDependency */,
+			);
+			name = "Pods-SS-Client";
+			productName = "Pods-SS-Client";
+			productReference = 5FF45B0DDC90C32686DE3A14BA65DBBC /* libPods-SS-Client.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3CB2B8006B2B1ACAF9ADCA1DC82E2290 /* BRLOptionParser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B561109B4C51E9DC9F5F27E9C033405 /* Build configuration list for PBXNativeTarget "BRLOptionParser" */;
+			buildPhases = (
+				2899546AD56DA12F9B03BC5050860413 /* Sources */,
+				C8718142612A4E100493606F033235C0 /* Frameworks */,
+				D6D75A22098E62174AFAD752CA5F6BEC /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-SS-Client";
-			productName = "Pods-SS-Client";
-			productReference = 083E4557002D2BAA1BC91D6BC8F8771D /* libPods-SS-Client.a */;
+			name = BRLOptionParser;
+			productName = BRLOptionParser;
+			productReference = 75AB2D15014B2E924E67166F5044D86E /* libBRLOptionParser.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -129,48 +218,87 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D8989945F558FD6BA6A7C67F69959004 /* Products */;
+			productRefGroup = B7B90D1DEEF24069EC58031745299506 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A8792FF63B5704A35FF2F236E45A9C72 /* Pods-SS-Client */,
+				3CB2B8006B2B1ACAF9ADCA1DC82E2290 /* BRLOptionParser */,
+				196E4E11880A657DA268673354A09120 /* Pods-SS-Client */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4D9FD108EB652C7D8919253C9AC11992 /* Sources */ = {
+		2899546AD56DA12F9B03BC5050860413 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD4A6C069D62C6DF7C2A0AD67BE2C476 /* Pods-SS-Client-dummy.m in Sources */,
+				2545E11592C408516EA9AC047FFD47FD /* BRLOptionParser-dummy.m in Sources */,
+				0A402C97D8A2855E4F69D8E2BFEE752E /* BRLOptionParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D505E00C7808FE34B11126BCC25A1B49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE839E39EDA7A236C85662CDA007213D /* Pods-SS-Client-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B8CDFC0F76FA7EF72DCEF785350A45F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BRLOptionParser;
+			target = 3CB2B8006B2B1ACAF9ADCA1DC82E2290 /* BRLOptionParser */;
+			targetProxy = E3ECF2E28FEDE463A87BB51CBA1DB348 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		07EDF394B3B8D6D7C75857F421A218B3 /* Release */ = {
+		353215786D69646983337802C8F2A8A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBBAA3657E2229450DF9E92B2E2EC432 /* Pods-SS-Client.release.xcconfig */;
+			baseConfigurationReference = 7CE2F18044B4691928FC9F495055B18F /* BRLOptionParser.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				GCC_PREFIX_HEADER = "Target Support Files/BRLOptionParser/BRLOptionParser-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		3E4FE876BE3FE23B968D72994E45F33E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CE2F18044B4691928FC9F495055B18F /* BRLOptionParser.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/BRLOptionParser/BRLOptionParser-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 			};
 			name = Release;
 		};
-		6A6A3D50E18528997EE2F03E3C9D8D09 /* Debug */ = {
+		63288458C65BDE5ECFBC875E7893CB8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 53DC4EB354A2A0834A43C07F662207FD /* Pods-SS-Client.debug.xcconfig */;
 			buildSettings = {
@@ -242,6 +370,26 @@
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		DBDCC6E92166FBD012A53A61E27B17BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBBAA3657E2229450DF9E92B2E2EC432 /* Pods-SS-Client.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -317,11 +465,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		86C70F50498BDBEFDFBDC188AA65C615 /* Build configuration list for PBXNativeTarget "Pods-SS-Client" */ = {
+		4B561109B4C51E9DC9F5F27E9C033405 /* Build configuration list for PBXNativeTarget "BRLOptionParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A6A3D50E18528997EE2F03E3C9D8D09 /* Debug */,
-				07EDF394B3B8D6D7C75857F421A218B3 /* Release */,
+				353215786D69646983337802C8F2A8A3 /* Debug */,
+				3E4FE876BE3FE23B968D72994E45F33E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68A53EDC6147EC49B60C3EB20BAC4C7A /* Build configuration list for PBXNativeTarget "Pods-SS-Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63288458C65BDE5ECFBC875E7893CB8D /* Debug */,
+				DBDCC6E92166FBD012A53A61E27B17BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

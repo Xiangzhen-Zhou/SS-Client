@@ -6,5 +6,6 @@ target 'SS-Client' do
   # use_frameworks!
 
   # Pods for SS-Client
+  pod 'BRLOptionParser', '~> 0.3.1'
 
 end
