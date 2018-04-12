@@ -73,11 +73,9 @@
 
 - (BOOL)saveProxies {
     NSMutableDictionary* saved = [NSMutableDictionary new];
-    NSDictionary* sets = SCPreferencesGetValue(self->_prefRef, kSCPrefNetworkServices);
-    for (NSString* key in sets.allKeys) {
-        NSDictionary* proxies = ((NSDictionary *)sets[key])[(__bridge NSString *)kSCEntNetProxies];
-        saved[key] = proxies;
-    }
+    [self enumerateProxies:^(NSString* set, NSDictionary* proxy) {
+        saved[set] = proxy;
+    }];
     
     NSFileManager* fs = [NSFileManager defaultManager];
     NSError* error;
@@ -99,12 +97,11 @@
     
     if (existed) {
         NSDictionary* proxies = [NSDictionary dictionaryWithContentsOfFile: filePath];
-        NSDictionary* sets = SCPreferencesGetValue(self->_prefRef, kSCPrefNetworkServices);
-        for (NSString* key in sets.allKeys) {
-            NSString* path = [NSString stringWithFormat: @"/%@/%@/%@", kSCPrefNetworkServices, key, kSCEntNetProxies];
-            BOOL ret = SCPreferencesPathSetValue(self->_prefRef, (__bridge CFStringRef)path, (__bridge CFDictionaryRef)proxies[key]);
+        [self enumerateProxies:^(NSString* set, NSDictionary* proxy) {
+            NSString* path = [NSString stringWithFormat: @"/%@/%@/%@", kSCPrefNetworkServices, set, kSCEntNetProxies];
+            BOOL ret = SCPreferencesPathSetValue(self->_prefRef, (__bridge CFStringRef)path, (__bridge CFDictionaryRef)proxies[set]);
             assert(ret);
-        }
+        }];
         
         SCPreferencesCommitChanges(self->_prefRef);
         SCPreferencesApplyChanges(self->_prefRef);
@@ -138,11 +135,22 @@
             (NSString *)kSCPropNetProxiesExceptionsList: @[]
     };
     
-    NSDictionary* sets = SCPreferencesGetValue(self->_prefRef, kSCPrefNetworkServices);
-    for (NSString* key in sets.allKeys) {
-        NSString* path = [NSString stringWithFormat: @"/%@/%@/%@", kSCPrefNetworkServices, key, kSCEntNetProxies];
+    [self enumerateProxies:^(NSString* set, NSDictionary* proxy) {
+        NSString* path = [NSString stringWithFormat: @"/%@/%@/%@", kSCPrefNetworkServices, set, kSCEntNetProxies];
         BOOL ret = SCPreferencesPathSetValue(self->_prefRef, (__bridge CFStringRef)path, (__bridge CFDictionaryRef)empty);
         assert(ret);
+    }];
+    
+    SCPreferencesCommitChanges(self->_prefRef);
+    SCPreferencesApplyChanges(self->_prefRef);
+    SCPreferencesSynchronize(self->_prefRef);
+}
+
+- (void)enumerateProxies: (void(^)(NSString*, NSDictionary*))block {
+    NSDictionary* sets = SCPreferencesGetValue(self->_prefRef, kSCPrefNetworkServices);
+    for (NSString* key in sets.allKeys) {
+        NSDictionary* proxies = ((NSDictionary *)sets[key])[(__bridge NSString *)kSCEntNetProxies];
+        block(key, proxies);
     }
 }
 
