@@ -10,6 +10,7 @@
 		04B885438018EA155BF8E749 /* libPods-SS-Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E90876A01F3A18BF9FCC30AA /* libPods-SS-Client.a */; };
 		5D5CDC72207CFC190053DD36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CDC71207CFC190053DD36 /* main.m */; };
 		5D5CDC79207CFD490053DD36 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D5CDC78207CFD490053DD36 /* SystemConfiguration.framework */; };
+		5DCB6778207F86D6002C6F18 /* ProxySetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB6777207F86D6002C6F18 /* ProxySetter.m */; };
 		5DF0638A207B9B5600790148 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF06389207B9B5600790148 /* ServiceManagement.framework */; };
 		5DF063B1207B9CBE00790148 /* LaunchHelperTool.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5DF063AE207B9CA700790148 /* LaunchHelperTool.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5DFF3FE2207B89910008D219 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF3FE1207B89910008D219 /* AppDelegate.m */; };
@@ -69,6 +70,8 @@
 		5D5CDC6F207CFC190053DD36 /* NetworkProxySetter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetworkProxySetter; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5CDC71207CFC190053DD36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D5CDC78207CFD490053DD36 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5DCB6776207F86D6002C6F18 /* ProxySetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProxySetter.h; sourceTree = "<group>"; };
+		5DCB6777207F86D6002C6F18 /* ProxySetter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProxySetter.m; sourceTree = "<group>"; };
 		5DF06389207B9B5600790148 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		5DF063A9207B9CA700790148 /* LaunchHelperTool.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LaunchHelperTool.xcodeproj; path = LaunchHelperTool/LaunchHelperTool.xcodeproj; sourceTree = "<group>"; };
 		5DFF3FDD207B89910008D219 /* SS-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SS-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				5D5CDC71207CFC190053DD36 /* main.m */,
+				5DCB6776207F86D6002C6F18 /* ProxySetter.h */,
+				5DCB6777207F86D6002C6F18 /* ProxySetter.m */,
 			);
 			path = NetworkProxySetter;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D5CDC72207CFC190053DD36 /* main.m in Sources */,
+				5DCB6778207F86D6002C6F18 /* ProxySetter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
