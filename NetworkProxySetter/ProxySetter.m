@@ -167,13 +167,11 @@
     }
 }
 
-- (void)setHttpProxyProtocolEnabled:(BOOL)enabled Url: (NSString *)urlString Port: (NSUInteger)port {
+- (void)setNetworkProxySetting: (NSDictionary *)newSetting {
     [self enumerateProxies:^(NSString* set, NSDictionary* proxy) {
         NSMutableDictionary* setting = [NSMutableDictionary dictionaryWithDictionary: proxy];
-        setting[(NSString *)kSCPropNetProxiesHTTPEnable] = [NSNumber numberWithInt: enabled ? 1 : 0];
-        if (enabled) {
-            setting[(NSString *)kSCPropNetProxiesHTTPProxy] =  urlString;
-            setting[(NSString *)kSCPropNetProxiesHTTPPort] = [NSNumber numberWithInteger: port];
+        for (NSString* key in newSetting.allKeys) {
+            setting[key] = newSetting[key];
         }
         
         NSString* path = [NSString stringWithFormat: @"/%@/%@/%@", kSCPrefNetworkServices, set, kSCEntNetProxies];
@@ -184,44 +182,39 @@
     SCPreferencesCommitChanges(self->_prefRef);
     SCPreferencesApplyChanges(self->_prefRef);
     SCPreferencesSynchronize(self->_prefRef);
+}
+
+- (void)setHttpProxyProtocolEnabled:(BOOL)enabled Url: (NSString *)urlString Port: (NSUInteger)port {
+    NSMutableDictionary* setting = [NSMutableDictionary dictionary];
+    setting[(NSString *)kSCPropNetProxiesHTTPEnable] = [NSNumber numberWithInt: enabled ? 1 : 0];
+    if (enabled) {
+        setting[(NSString *)kSCPropNetProxiesHTTPProxy] =  urlString;
+        setting[(NSString *)kSCPropNetProxiesHTTPPort] = [NSNumber numberWithInteger: port];
+    }
+    
+    [self setNetworkProxySetting: setting];
 }
 
 - (void)setHttpsProxyProtocolEnabled:(BOOL)enabled Url: (NSString *)urlString Port: (NSUInteger)port {
-    [self enumerateProxies:^(NSString* set, NSDictionary* proxy) {
-        NSMutableDictionary* setting = [NSMutableDictionary dictionaryWithDictionary: proxy];
-        setting[(NSString *)kSCPropNetProxiesHTTPSEnable] = [NSNumber numberWithInt: enabled ? 1 : 0];
-        if (enabled) {
-            setting[(NSString *)kSCPropNetProxiesHTTPSProxy] =  urlString;
-            setting[(NSString *)kSCPropNetProxiesHTTPSPort] = [NSNumber numberWithInteger: port];
-        }
-        
-        NSString* path = [NSString stringWithFormat: @"/%@/%@/%@", kSCPrefNetworkServices, set, kSCEntNetProxies];
-        BOOL ret = SCPreferencesPathSetValue(self->_prefRef, (__bridge CFStringRef)path, (__bridge CFDictionaryRef)setting);
-        assert(ret);
-    }];
+    NSMutableDictionary* setting = [NSMutableDictionary dictionary];
+    setting[(NSString *)kSCPropNetProxiesHTTPSEnable] = [NSNumber numberWithInt: enabled ? 1 : 0];
+    if (enabled) {
+        setting[(NSString *)kSCPropNetProxiesHTTPSProxy] =  urlString;
+        setting[(NSString *)kSCPropNetProxiesHTTPSPort] = [NSNumber numberWithInteger: port];
+    }
     
-    SCPreferencesCommitChanges(self->_prefRef);
-    SCPreferencesApplyChanges(self->_prefRef);
-    SCPreferencesSynchronize(self->_prefRef);
+    [self setNetworkProxySetting: setting];
 }
 
 - (void)setSocksProxyProtocolEnabled:(BOOL)enabled Url: (NSString *)urlString Port: (NSUInteger)port {
-    [self enumerateProxies:^(NSString* set, NSDictionary* proxy) {
-        NSMutableDictionary* setting = [NSMutableDictionary dictionaryWithDictionary: proxy];
-        setting[(NSString *)kSCPropNetProxiesSOCKSEnable] = [NSNumber numberWithInt: enabled ? 1 : 0];
-        if (enabled) {
-            setting[(NSString *)kSCPropNetProxiesSOCKSProxy] =  urlString;
-            setting[(NSString *)kSCPropNetProxiesSOCKSPort] = [NSNumber numberWithInteger: port];
-        }
-        
-        NSString* path = [NSString stringWithFormat: @"/%@/%@/%@", kSCPrefNetworkServices, set, kSCEntNetProxies];
-        BOOL ret = SCPreferencesPathSetValue(self->_prefRef, (__bridge CFStringRef)path, (__bridge CFDictionaryRef)setting);
-        assert(ret);
-    }];
+    NSMutableDictionary* setting = [NSMutableDictionary dictionary];
+    setting[(NSString *)kSCPropNetProxiesSOCKSEnable] = [NSNumber numberWithInt: enabled ? 1 : 0];
+    if (enabled) {
+        setting[(NSString *)kSCPropNetProxiesSOCKSProxy] =  urlString;
+        setting[(NSString *)kSCPropNetProxiesSOCKSPort] = [NSNumber numberWithInteger: port];
+    }
     
-    SCPreferencesCommitChanges(self->_prefRef);
-    SCPreferencesApplyChanges(self->_prefRef);
-    SCPreferencesSynchronize(self->_prefRef);
+    [self setNetworkProxySetting: setting];
 }
 
 - (void)setExceptionList:(NSArray *)exceptionList {
@@ -229,18 +222,8 @@
         return;
     }
     
-    [self enumerateProxies:^(NSString* set, NSDictionary* proxy) {
-        NSMutableDictionary* setting = [NSMutableDictionary dictionaryWithDictionary: proxy];
-        setting[(NSString *)kSCPropNetProxiesExceptionsList] = exceptionList;
-        
-        NSString* path = [NSString stringWithFormat: @"/%@/%@/%@", kSCPrefNetworkServices, set, kSCEntNetProxies];
-        BOOL ret = SCPreferencesPathSetValue(self->_prefRef, (__bridge CFStringRef)path, (__bridge CFDictionaryRef)setting);
-        assert(ret);
-    }];
-    
-    SCPreferencesCommitChanges(self->_prefRef);
-    SCPreferencesApplyChanges(self->_prefRef);
-    SCPreferencesSynchronize(self->_prefRef);
+    NSDictionary* setting = @{(NSString *)kSCPropNetProxiesExceptionsList: exceptionList};
+    [self setNetworkProxySetting: setting];
 }
 
 - (void)setPacEnabled: (BOOL)enabled UrlString:(NSString *)pacUrlString {
@@ -248,19 +231,12 @@
         return;
     }
     
-    [self enumerateProxies:^(NSString* set, NSDictionary* proxy) {
-        NSMutableDictionary* setting = [NSMutableDictionary dictionaryWithDictionary: proxy];
-        setting[(NSString *)kSCPropNetProxiesProxyAutoConfigEnable] = [NSNumber numberWithInteger: enabled ? 1 : 0];
-        setting[(NSString *)kSCPropNetProxiesProxyAutoConfigURLString] = enabled ? pacUrlString : @"";
-        
-        NSString* path = [NSString stringWithFormat: @"/%@/%@/%@", kSCPrefNetworkServices, set, kSCEntNetProxies];
-        BOOL ret = SCPreferencesPathSetValue(self->_prefRef, (__bridge CFStringRef)path, (__bridge CFDictionaryRef)setting);
-        assert(ret);
-    }];
+    NSDictionary* setting = @{
+                              (NSString *)kSCPropNetProxiesProxyAutoConfigEnable: [NSNumber numberWithInteger: enabled ? 1 : 0],
+                              (NSString *)kSCPropNetProxiesProxyAutoConfigURLString: enabled ? pacUrlString : @""
+                              };
     
-    SCPreferencesCommitChanges(self->_prefRef);
-    SCPreferencesApplyChanges(self->_prefRef);
-    SCPreferencesSynchronize(self->_prefRef);
+    [self setNetworkProxySetting: setting];
 }
 
 @end

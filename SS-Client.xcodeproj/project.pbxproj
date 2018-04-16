@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04B885438018EA155BF8E749 /* libPods-SS-Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E90876A01F3A18BF9FCC30AA /* libPods-SS-Client.a */; };
+		18C416374795B5E378FA1A31 /* libPods-NetworkProxySetter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3ACC3B9F2E8D7E317C1928 /* libPods-NetworkProxySetter.a */; };
 		5D5CDC72207CFC190053DD36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CDC71207CFC190053DD36 /* main.m */; };
 		5D5CDC79207CFD490053DD36 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D5CDC78207CFD490053DD36 /* SystemConfiguration.framework */; };
 		5DCB6778207F86D6002C6F18 /* ProxySetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB6777207F86D6002C6F18 /* ProxySetter.m */; };
@@ -66,7 +67,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C3ACC3B9F2E8D7E317C1928 /* libPods-NetworkProxySetter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetworkProxySetter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7103C2ECBA68BBA22D7B11 /* Pods-SS-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SS-Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SS-Client/Pods-SS-Client.debug.xcconfig"; sourceTree = "<group>"; };
+		5BD7599994E1BB3FA0A8B06F /* Pods-NetworkProxySetter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkProxySetter.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkProxySetter/Pods-NetworkProxySetter.release.xcconfig"; sourceTree = "<group>"; };
 		5D5CDC6F207CFC190053DD36 /* NetworkProxySetter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetworkProxySetter; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5CDC71207CFC190053DD36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D5CDC78207CFD490053DD36 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -82,6 +85,7 @@
 		5DFF3FE8207B89910008D219 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DFF3FE9207B89910008D219 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D77CAF36D8FB1EBB73AA711 /* Pods-SS-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SS-Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-SS-Client/Pods-SS-Client.release.xcconfig"; sourceTree = "<group>"; };
+		CF98ADA714716E912BF30AA0 /* Pods-NetworkProxySetter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkProxySetter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkProxySetter/Pods-NetworkProxySetter.debug.xcconfig"; sourceTree = "<group>"; };
 		E90876A01F3A18BF9FCC30AA /* libPods-SS-Client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SS-Client.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D5CDC79207CFD490053DD36 /* SystemConfiguration.framework in Frameworks */,
+				18C416374795B5E378FA1A31 /* libPods-NetworkProxySetter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +116,8 @@
 			children = (
 				2D7103C2ECBA68BBA22D7B11 /* Pods-SS-Client.debug.xcconfig */,
 				8D77CAF36D8FB1EBB73AA711 /* Pods-SS-Client.release.xcconfig */,
+				CF98ADA714716E912BF30AA0 /* Pods-NetworkProxySetter.debug.xcconfig */,
+				5BD7599994E1BB3FA0A8B06F /* Pods-NetworkProxySetter.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 				5D5CDC78207CFD490053DD36 /* SystemConfiguration.framework */,
 				5DF06389207B9B5600790148 /* ServiceManagement.framework */,
 				E90876A01F3A18BF9FCC30AA /* libPods-SS-Client.a */,
+				2C3ACC3B9F2E8D7E317C1928 /* libPods-NetworkProxySetter.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -184,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D5CDC75207CFC190053DD36 /* Build configuration list for PBXNativeTarget "NetworkProxySetter" */;
 			buildPhases = (
+				7D61AC8355F8F60004090002 /* [CP] Check Pods Manifest.lock */,
 				5D5CDC6B207CFC190053DD36 /* Sources */,
 				5D5CDC6C207CFC190053DD36 /* Frameworks */,
 				5D5CDC6D207CFC190053DD36 /* CopyFiles */,
+				70A622BAF2715978A5026AFB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,6 +302,39 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		70A622BAF2715978A5026AFB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkProxySetter/Pods-NetworkProxySetter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D61AC8355F8F60004090002 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetworkProxySetter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8D4F3F830B7CAC14CEEB017F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,6 +433,7 @@
 /* Begin XCBuildConfiguration section */
 		5D5CDC73207CFC190053DD36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF98ADA714716E912BF30AA0 /* Pods-NetworkProxySetter.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2K3PAR9T8H;
@@ -399,6 +443,7 @@
 		};
 		5D5CDC74207CFC190053DD36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BD7599994E1BB3FA0A8B06F /* Pods-NetworkProxySetter.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2K3PAR9T8H;

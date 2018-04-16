@@ -9,14 +9,16 @@
 /* Begin PBXBuildFile section */
 		008D88E94858B0B8190DD42951253AD2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
 		0A402C97D8A2855E4F69D8E2BFEE752E /* BRLOptionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3795E87ED704FF9584AC195B98F5F8 /* BRLOptionParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1ED42FBFF77345D63F2257E340024557 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
 		2545E11592C408516EA9AC047FFD47FD /* BRLOptionParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78285CC5D8C66CF0FCE081D3F30B4790 /* BRLOptionParser-dummy.m */; };
+		482E100F6CDFBF898B977A8AA0BA1DD4 /* Pods-NetworkProxySetter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 520B03A56CAD77A1EA6F71E3DFDF9B1A /* Pods-NetworkProxySetter-dummy.m */; };
+		7F58CD2D4EADF52AA77C70DC38C8ACC4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
 		9B622302DDDA1881AC9ABA9EA4C81564 /* BRLOptionParser.h in Headers */ = {isa = PBXBuildFile; fileRef = B09AD2CFDBE3881404DC4448D33FD789 /* BRLOptionParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE33B3D88566571C55B5E6A9557E5E89 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
-		AE839E39EDA7A236C85662CDA007213D /* Pods-SS-Client-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F814223CD55F6A51D4066B3B399E160 /* Pods-SS-Client-dummy.m */; };
+		CD4A6C069D62C6DF7C2A0AD67BE2C476 /* Pods-SS-Client-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC22111B29D1670786385ECAA5091F7 /* Pods-SS-Client-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E3ECF2E28FEDE463A87BB51CBA1DB348 /* PBXContainerItemProxy */ = {
+		CB9DD5E0DB52C9185AC9F2238EB9B0B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -26,30 +28,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DC22111B29D1670786385ECAA5091F7 /* Pods-SS-Client-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SS-Client-dummy.m"; sourceTree = "<group>"; };
 		0F4E70B45ABE270F10257CEF49E142FD /* BRLOptionParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BRLOptionParser-prefix.pch"; sourceTree = "<group>"; };
-		2115B8EEEE5640488A927B022ACA1267 /* Pods-SS-Client-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SS-Client-resources.sh"; sourceTree = "<group>"; };
+		22D7C5C23CE24331074DE0B226C63E56 /* Pods-NetworkProxySetter-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetworkProxySetter-frameworks.sh"; sourceTree = "<group>"; };
 		270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		3F814223CD55F6A51D4066B3B399E160 /* Pods-SS-Client-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SS-Client-dummy.m"; sourceTree = "<group>"; };
-		53DC4EB354A2A0834A43C07F662207FD /* Pods-SS-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SS-Client.debug.xcconfig"; sourceTree = "<group>"; };
-		5FF45B0DDC90C32686DE3A14BA65DBBC /* libPods-SS-Client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SS-Client.a"; path = "libPods-SS-Client.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		75AB2D15014B2E924E67166F5044D86E /* libBRLOptionParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libBRLOptionParser.a; path = libBRLOptionParser.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		28C13660B3B6198C855FBC4F1C079493 /* Pods-NetworkProxySetter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetworkProxySetter.debug.xcconfig"; sourceTree = "<group>"; };
+		33DA03704B7351763FC768BCB99A714D /* Pods-SS-Client-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SS-Client-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3E6371E9877DA9805FC66200BDE438C8 /* libBRLOptionParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libBRLOptionParser.a; path = libBRLOptionParser.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E6BC2EF28CF8CAE912ACD18B4E2EA3E /* Pods-SS-Client-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SS-Client-resources.sh"; sourceTree = "<group>"; };
+		504028A1C0C69BEA33DE140C6CF21BAD /* Pods-NetworkProxySetter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NetworkProxySetter-acknowledgements.markdown"; sourceTree = "<group>"; };
+		520B03A56CAD77A1EA6F71E3DFDF9B1A /* Pods-NetworkProxySetter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NetworkProxySetter-dummy.m"; sourceTree = "<group>"; };
+		59D03570B686D9934B527B4F4D1A258F /* Pods-SS-Client-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SS-Client-acknowledgements.plist"; sourceTree = "<group>"; };
 		78285CC5D8C66CF0FCE081D3F30B4790 /* BRLOptionParser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BRLOptionParser-dummy.m"; sourceTree = "<group>"; };
 		7CE2F18044B4691928FC9F495055B18F /* BRLOptionParser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BRLOptionParser.xcconfig; sourceTree = "<group>"; };
-		82E1403F417C02985A96A939A167FFF6 /* Pods-SS-Client-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SS-Client-frameworks.sh"; sourceTree = "<group>"; };
+		874F66882079D475FCC7161B2EB4CC94 /* Pods-NetworkProxySetter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NetworkProxySetter.release.xcconfig"; sourceTree = "<group>"; };
+		9101FC7089AA83E4DC19ECF657C20B8B /* Pods-NetworkProxySetter-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NetworkProxySetter-resources.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E3795E87ED704FF9584AC195B98F5F8 /* BRLOptionParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRLOptionParser.m; path = BRLOptionParser/BRLOptionParser.m; sourceTree = "<group>"; };
+		AFEFAC158E376FAB501B0C552DC89E67 /* libPods-SS-Client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SS-Client.a"; path = "libPods-SS-Client.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B09AD2CFDBE3881404DC4448D33FD789 /* BRLOptionParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRLOptionParser.h; path = BRLOptionParser/BRLOptionParser.h; sourceTree = "<group>"; };
-		C203BC10BA6AF88B33B3D45E7EA19247 /* Pods-SS-Client-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SS-Client-acknowledgements.plist"; sourceTree = "<group>"; };
-		CD6F83F06729C6FA0ED78C6A7C882440 /* Pods-SS-Client-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SS-Client-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FBBAA3657E2229450DF9E92B2E2EC432 /* Pods-SS-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SS-Client.release.xcconfig"; sourceTree = "<group>"; };
+		B59062244B78F917B9E162DB7E467C60 /* Pods-SS-Client-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SS-Client-frameworks.sh"; sourceTree = "<group>"; };
+		C5DA720E02AE7D47227456BA18CBF40A /* Pods-SS-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SS-Client.release.xcconfig"; sourceTree = "<group>"; };
+		C8D3033E0AD8672D5A4E7DC70E4600CA /* Pods-SS-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SS-Client.debug.xcconfig"; sourceTree = "<group>"; };
+		E597D3C9B8AE73A89A96579A45137895 /* Pods-NetworkProxySetter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NetworkProxySetter-acknowledgements.plist"; sourceTree = "<group>"; };
+		FD14D41DFB6C9AD38F3CABC8A47A2C3F /* libPods-NetworkProxySetter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NetworkProxySetter.a"; path = "libPods-NetworkProxySetter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BB4DE36ED2AFBA20C2DE34A1C99C779A /* Frameworks */ = {
+		5A84D189905CC1994EEC50D358C7FD28 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE33B3D88566571C55B5E6A9557E5E89 /* Cocoa.framework in Frameworks */,
+				7F58CD2D4EADF52AA77C70DC38C8ACC4 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +68,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				008D88E94858B0B8190DD42951253AD2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D930033E495A867C1B1CBC026349A4F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ED42FBFF77345D63F2257E340024557 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +101,21 @@
 			path = "../Target Support Files/BRLOptionParser";
 			sourceTree = "<group>";
 		};
+		26404A6FCE71A666C4B4D74FDD93CEC8 /* Pods-NetworkProxySetter */ = {
+			isa = PBXGroup;
+			children = (
+				504028A1C0C69BEA33DE140C6CF21BAD /* Pods-NetworkProxySetter-acknowledgements.markdown */,
+				E597D3C9B8AE73A89A96579A45137895 /* Pods-NetworkProxySetter-acknowledgements.plist */,
+				520B03A56CAD77A1EA6F71E3DFDF9B1A /* Pods-NetworkProxySetter-dummy.m */,
+				22D7C5C23CE24331074DE0B226C63E56 /* Pods-NetworkProxySetter-frameworks.sh */,
+				9101FC7089AA83E4DC19ECF657C20B8B /* Pods-NetworkProxySetter-resources.sh */,
+				28C13660B3B6198C855FBC4F1C079493 /* Pods-NetworkProxySetter.debug.xcconfig */,
+				874F66882079D475FCC7161B2EB4CC94 /* Pods-NetworkProxySetter.release.xcconfig */,
+			);
+			name = "Pods-NetworkProxySetter";
+			path = "Target Support Files/Pods-NetworkProxySetter";
+			sourceTree = "<group>";
+		};
 		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,10 +124,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		49353F82DE6BFF6472EB68868EF719B2 /* Targets Support Files */ = {
+		3AF2C2927BA2557508147840687686C1 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9B990BE9C509E500EC59704B7CE38573 /* Pods-SS-Client */,
+				26404A6FCE71A666C4B4D74FDD93CEC8 /* Pods-NetworkProxySetter */,
+				843567F1E617B8BB6F9E89034FA61041 /* Pods-SS-Client */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -113,33 +147,24 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
 				5BFE149F7BC7DC805B01A1C6355C335B /* Pods */,
-				B7B90D1DEEF24069EC58031745299506 /* Products */,
-				49353F82DE6BFF6472EB68868EF719B2 /* Targets Support Files */,
+				F6A08AE5E3EA07A4F4833083FDB24694 /* Products */,
+				3AF2C2927BA2557508147840687686C1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9B990BE9C509E500EC59704B7CE38573 /* Pods-SS-Client */ = {
+		843567F1E617B8BB6F9E89034FA61041 /* Pods-SS-Client */ = {
 			isa = PBXGroup;
 			children = (
-				CD6F83F06729C6FA0ED78C6A7C882440 /* Pods-SS-Client-acknowledgements.markdown */,
-				C203BC10BA6AF88B33B3D45E7EA19247 /* Pods-SS-Client-acknowledgements.plist */,
-				3F814223CD55F6A51D4066B3B399E160 /* Pods-SS-Client-dummy.m */,
-				82E1403F417C02985A96A939A167FFF6 /* Pods-SS-Client-frameworks.sh */,
-				2115B8EEEE5640488A927B022ACA1267 /* Pods-SS-Client-resources.sh */,
-				53DC4EB354A2A0834A43C07F662207FD /* Pods-SS-Client.debug.xcconfig */,
-				FBBAA3657E2229450DF9E92B2E2EC432 /* Pods-SS-Client.release.xcconfig */,
+				33DA03704B7351763FC768BCB99A714D /* Pods-SS-Client-acknowledgements.markdown */,
+				59D03570B686D9934B527B4F4D1A258F /* Pods-SS-Client-acknowledgements.plist */,
+				0DC22111B29D1670786385ECAA5091F7 /* Pods-SS-Client-dummy.m */,
+				B59062244B78F917B9E162DB7E467C60 /* Pods-SS-Client-frameworks.sh */,
+				3E6BC2EF28CF8CAE912ACD18B4E2EA3E /* Pods-SS-Client-resources.sh */,
+				C8D3033E0AD8672D5A4E7DC70E4600CA /* Pods-SS-Client.debug.xcconfig */,
+				C5DA720E02AE7D47227456BA18CBF40A /* Pods-SS-Client.release.xcconfig */,
 			);
 			name = "Pods-SS-Client";
 			path = "Target Support Files/Pods-SS-Client";
-			sourceTree = "<group>";
-		};
-		B7B90D1DEEF24069EC58031745299506 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				75AB2D15014B2E924E67166F5044D86E /* libBRLOptionParser.a */,
-				5FF45B0DDC90C32686DE3A14BA65DBBC /* libPods-SS-Client.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		B807170BC98654F12B393CF4620C713B /* BRLOptionParser */ = {
@@ -151,6 +176,16 @@
 			);
 			name = BRLOptionParser;
 			path = BRLOptionParser;
+			sourceTree = "<group>";
+		};
+		F6A08AE5E3EA07A4F4833083FDB24694 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E6371E9877DA9805FC66200BDE438C8 /* libBRLOptionParser.a */,
+				FD14D41DFB6C9AD38F3CABC8A47A2C3F /* libPods-NetworkProxySetter.a */,
+				AFEFAC158E376FAB501B0C552DC89E67 /* libPods-SS-Client.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,21 +202,21 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		196E4E11880A657DA268673354A09120 /* Pods-SS-Client */ = {
+		1DD607DA5347DC0877E2D9B66AF254B9 /* Pods-NetworkProxySetter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 68A53EDC6147EC49B60C3EB20BAC4C7A /* Build configuration list for PBXNativeTarget "Pods-SS-Client" */;
+			buildConfigurationList = 19498CB6A7033CA45D879CE9AD93F3A6 /* Build configuration list for PBXNativeTarget "Pods-NetworkProxySetter" */;
 			buildPhases = (
-				D505E00C7808FE34B11126BCC25A1B49 /* Sources */,
-				BB4DE36ED2AFBA20C2DE34A1C99C779A /* Frameworks */,
+				26FD3183F649A39B46941F4543696E50 /* Sources */,
+				5A84D189905CC1994EEC50D358C7FD28 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B8CDFC0F76FA7EF72DCEF785350A45F5 /* PBXTargetDependency */,
+				DA1C527BDA8AA506FEB8099DF355C81D /* PBXTargetDependency */,
 			);
-			name = "Pods-SS-Client";
-			productName = "Pods-SS-Client";
-			productReference = 5FF45B0DDC90C32686DE3A14BA65DBBC /* libPods-SS-Client.a */;
+			name = "Pods-NetworkProxySetter";
+			productName = "Pods-NetworkProxySetter";
+			productReference = FD14D41DFB6C9AD38F3CABC8A47A2C3F /* libPods-NetworkProxySetter.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		3CB2B8006B2B1ACAF9ADCA1DC82E2290 /* BRLOptionParser */ = {
@@ -198,7 +233,23 @@
 			);
 			name = BRLOptionParser;
 			productName = BRLOptionParser;
-			productReference = 75AB2D15014B2E924E67166F5044D86E /* libBRLOptionParser.a */;
+			productReference = 3E6371E9877DA9805FC66200BDE438C8 /* libBRLOptionParser.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A8792FF63B5704A35FF2F236E45A9C72 /* Pods-SS-Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86C70F50498BDBEFDFBDC188AA65C615 /* Build configuration list for PBXNativeTarget "Pods-SS-Client" */;
+			buildPhases = (
+				4D9FD108EB652C7D8919253C9AC11992 /* Sources */,
+				D930033E495A867C1B1CBC026349A4F3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SS-Client";
+			productName = "Pods-SS-Client";
+			productReference = AFEFAC158E376FAB501B0C552DC89E67 /* libPods-SS-Client.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -218,17 +269,26 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = B7B90D1DEEF24069EC58031745299506 /* Products */;
+			productRefGroup = F6A08AE5E3EA07A4F4833083FDB24694 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				3CB2B8006B2B1ACAF9ADCA1DC82E2290 /* BRLOptionParser */,
-				196E4E11880A657DA268673354A09120 /* Pods-SS-Client */,
+				1DD607DA5347DC0877E2D9B66AF254B9 /* Pods-NetworkProxySetter */,
+				A8792FF63B5704A35FF2F236E45A9C72 /* Pods-SS-Client */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		26FD3183F649A39B46941F4543696E50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				482E100F6CDFBF898B977A8AA0BA1DD4 /* Pods-NetworkProxySetter-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2899546AD56DA12F9B03BC5050860413 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,26 +298,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D505E00C7808FE34B11126BCC25A1B49 /* Sources */ = {
+		4D9FD108EB652C7D8919253C9AC11992 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE839E39EDA7A236C85662CDA007213D /* Pods-SS-Client-dummy.m in Sources */,
+				CD4A6C069D62C6DF7C2A0AD67BE2C476 /* Pods-SS-Client-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B8CDFC0F76FA7EF72DCEF785350A45F5 /* PBXTargetDependency */ = {
+		DA1C527BDA8AA506FEB8099DF355C81D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BRLOptionParser;
 			target = 3CB2B8006B2B1ACAF9ADCA1DC82E2290 /* BRLOptionParser */;
-			targetProxy = E3ECF2E28FEDE463A87BB51CBA1DB348 /* PBXContainerItemProxy */;
+			targetProxy = CB9DD5E0DB52C9185AC9F2238EB9B0B6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		07EDF394B3B8D6D7C75857F421A218B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5DA720E02AE7D47227456BA18CBF40A /* Pods-SS-Client.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		353215786D69646983337802C8F2A8A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7CE2F18044B4691928FC9F495055B18F /* BRLOptionParser.xcconfig */;
@@ -298,9 +378,9 @@
 			};
 			name = Release;
 		};
-		63288458C65BDE5ECFBC875E7893CB8D /* Debug */ = {
+		6A6A3D50E18528997EE2F03E3C9D8D09 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53DC4EB354A2A0834A43C07F662207FD /* Pods-SS-Client.debug.xcconfig */;
+			baseConfigurationReference = C8D3033E0AD8672D5A4E7DC70E4600CA /* Pods-SS-Client.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -317,6 +397,46 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		717E8FD35D03A9937B50F43F7131B646 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28C13660B3B6198C855FBC4F1C079493 /* Pods-NetworkProxySetter.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		85F3FDF64B6743B17DE21B61554F01FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 874F66882079D475FCC7161B2EB4CC94 /* Pods-NetworkProxySetter.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		C4D8B0A6AD4EF0183B7B90C84630289B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -370,26 +490,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		DBDCC6E92166FBD012A53A61E27B17BC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBBAA3657E2229450DF9E92B2E2EC432 /* Pods-SS-Client.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -456,6 +556,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		19498CB6A7033CA45D879CE9AD93F3A6 /* Build configuration list for PBXNativeTarget "Pods-NetworkProxySetter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				717E8FD35D03A9937B50F43F7131B646 /* Debug */,
+				85F3FDF64B6743B17DE21B61554F01FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -474,11 +583,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		68A53EDC6147EC49B60C3EB20BAC4C7A /* Build configuration list for PBXNativeTarget "Pods-SS-Client" */ = {
+		86C70F50498BDBEFDFBDC188AA65C615 /* Build configuration list for PBXNativeTarget "Pods-SS-Client" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				63288458C65BDE5ECFBC875E7893CB8D /* Debug */,
-				DBDCC6E92166FBD012A53A61E27B17BC /* Release */,
+				6A6A3D50E18528997EE2F03E3C9D8D09 /* Debug */,
+				07EDF394B3B8D6D7C75857F421A218B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

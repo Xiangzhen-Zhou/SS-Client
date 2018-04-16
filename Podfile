@@ -6,6 +6,12 @@ target 'SS-Client' do
   # use_frameworks!
 
   # Pods for SS-Client
+
+end
+
+target 'NetworkProxySetter' do 
+
+  # Pods for NetworkProxySetter
   pod 'BRLOptionParser', '~> 0.3.1'
 
 end
