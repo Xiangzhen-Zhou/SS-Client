@@ -19,4 +19,8 @@
 - (BOOL)restoreProxies;
 - (void)emptyProxies;
 
+- (void)setProxyForProtocol:(NSString *)protocol Enabled:(BOOL)enabled Url:(NSString *)urlString Port:(NSUInteger)port;
+- (void)setExceptionList: (NSArray *)exceptionList;
+- (void)setPacEnabled: (BOOL)enabled UrlString:(NSString *)pacUrlString;
+
 @end
