@@ -9,11 +9,14 @@
 #import <ServiceManagement/ServiceManagement.h>
 
 #import "AppDelegate.h"
+#import "HelperTool.h"
 
 #define STARTUP_LOGIN   0
 
 @interface AppDelegate () {
     NSStatusItem* _statusItem;
+    AuthorizationRef _authRef;
+    NSXPCConnection* _xpcConnection;
 }
 
 @property (weak) IBOutlet NSMenu *menu;
@@ -23,6 +26,37 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    AuthorizationFlags flags = kAuthorizationFlagDefaults | kAuthorizationFlagInteractionAllowed;
+    OSStatus status = AuthorizationCreate(NULL, kAuthorizationEmptyEnvironment, flags, &_authRef);
+    assert(status == errAuthorizationSuccess);
+    
+    CFErrorRef error;
+    BOOL ret = SMJobBless(kSMDomainSystemLaunchd, CFSTR("com.zxzerster.SS-Client.HelperTool"), _authRef, &error);
+    if (!ret) {
+        NSLog(@"SMJobBless failed: %@", [((__bridge NSError *)error) localizedDescription]);
+        assert(NO);
+        exit(EXIT_FAILURE);
+    }
+    
+    _xpcConnection = [[NSXPCConnection alloc] initWithMachServiceName: kHelperToolMachServiceName options: NSXPCConnectionPrivileged];
+    _xpcConnection.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol: @protocol(HelperToolProtocol)];
+    _xpcConnection.invalidationHandler = ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"++++++++++   Error here!");
+        });
+    };
+    
+    //----------   Test code
+    [_xpcConnection resume];
+    NSLog(@"Calling remote object...");
+    [[_xpcConnection remoteObjectProxyWithErrorHandler:^(NSError * _Nonnull error) {
+        NSLog(@"==========   error handler here!");
+    }] installProxySetterAtPath: @"Install Tool Path" withReply:^(BOOL success, NSString* msg, NSError* error) {
+        NSLog(@"==========    Message: %@", msg);
+    }];
+    NSLog(@"Calling finished");
+    //----------   Test code
+    
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength: NSVariableStatusItemLength];
     NSImage* statusItemIcon = [NSImage imageNamed: @"MenuIcon"];
     statusItemIcon.template = YES;
@@ -38,7 +72,7 @@
 
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+    AuthorizationFree(_authRef, kAuthorizationFlagDefaults);
 }
 
 - (IBAction)quit:(id)sender {

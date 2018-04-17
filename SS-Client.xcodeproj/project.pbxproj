@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04B885438018EA155BF8E749 /* libPods-SS-Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E90876A01F3A18BF9FCC30AA /* libPods-SS-Client.a */; };
 		18C416374795B5E378FA1A31 /* libPods-NetworkProxySetter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3ACC3B9F2E8D7E317C1928 /* libPods-NetworkProxySetter.a */; };
+		5D267DB4208631F0004DB7A4 /* HelperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D267DB3208631F0004DB7A4 /* HelperTool.m */; };
 		5D5CDC72207CFC190053DD36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CDC71207CFC190053DD36 /* main.m */; };
 		5D5CDC79207CFD490053DD36 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D5CDC78207CFD490053DD36 /* SystemConfiguration.framework */; };
 		5D9602E4208627E600FEDE94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9602E3208627E600FEDE94 /* main.m */; };
@@ -98,6 +99,8 @@
 		2C3ACC3B9F2E8D7E317C1928 /* libPods-NetworkProxySetter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetworkProxySetter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7103C2ECBA68BBA22D7B11 /* Pods-SS-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SS-Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SS-Client/Pods-SS-Client.debug.xcconfig"; sourceTree = "<group>"; };
 		5BD7599994E1BB3FA0A8B06F /* Pods-NetworkProxySetter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkProxySetter.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkProxySetter/Pods-NetworkProxySetter.release.xcconfig"; sourceTree = "<group>"; };
+		5D267DB2208631F0004DB7A4 /* HelperTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelperTool.h; sourceTree = "<group>"; };
+		5D267DB3208631F0004DB7A4 /* HelperTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelperTool.m; sourceTree = "<group>"; };
 		5D5CDC6F207CFC190053DD36 /* NetworkProxySetter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetworkProxySetter; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5CDC71207CFC190053DD36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D5CDC78207CFD490053DD36 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -174,9 +177,11 @@
 		5D9602E2208627E600FEDE94 /* HelperTool */ = {
 			isa = PBXGroup;
 			children = (
-				5D9602E3208627E600FEDE94 /* main.m */,
 				5D9602EC20862B3600FEDE94 /* HelperTool-Info.plist */,
 				5D9602ED20862B5000FEDE94 /* HelperTool-Launchd.plist */,
+				5D9602E3208627E600FEDE94 /* main.m */,
+				5D267DB2208631F0004DB7A4 /* HelperTool.h */,
+				5D267DB3208631F0004DB7A4 /* HelperTool.m */,
 			);
 			path = HelperTool;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D9602E4208627E600FEDE94 /* main.m in Sources */,
+				5D267DB4208631F0004DB7A4 /* HelperTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
