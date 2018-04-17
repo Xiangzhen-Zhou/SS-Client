@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SMPrivilegedExecutables</key>
+	<dict>
+		<key>com.zxzerster.SS-Client.HelperTool</key>
+		<string>identifier &quot;com.zxzerster.SS-Client.HelperTool&quot; and anchor apple generic and certificate leaf[subject.CN] = &quot;Mac Developer: zxz_er@126.com (27QQ2P4X97)&quot; and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+	</dict>
 	<key>LSUIElement</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
