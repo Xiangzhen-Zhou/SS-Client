@@ -14,7 +14,9 @@
 
 @required
 
-- (void)installProxySetterAtPath: (NSString *)installPath withReply: (void(^)(BOOL, NSString*, NSError*))block;
+- (void)installNetworkToolAtSourcePath: (NSString *)srcPath withReply: (void(^)(BOOL success, NSString* message, NSError* error))reply;
+- (void)setGlobalModeWithReply: (void(^)(BOOL success, NSError* error))reply;
+- (void)turnOffProxyWithReply: (void(^)(BOOL success, NSError* error))reply;
 
 @end
 

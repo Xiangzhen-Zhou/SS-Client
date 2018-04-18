@@ -12,6 +12,8 @@
 		5D267DB4208631F0004DB7A4 /* HelperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D267DB3208631F0004DB7A4 /* HelperTool.m */; };
 		5D5CDC72207CFC190053DD36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CDC71207CFC190053DD36 /* main.m */; };
 		5D5CDC79207CFD490053DD36 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D5CDC78207CFD490053DD36 /* SystemConfiguration.framework */; };
+		5D8F9FA720877713008B8AAC /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F9FA620877713008B8AAC /* Utils.m */; };
+		5D8F9FA920877931008B8AAC /* NetworkProxySetter in Resources */ = {isa = PBXBuildFile; fileRef = 5D5CDC6F207CFC190053DD36 /* NetworkProxySetter */; };
 		5D9602E4208627E600FEDE94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9602E3208627E600FEDE94 /* main.m */; };
 		5D9602EB2086283600FEDE94 /* com.zxzerster.SS-Client.HelperTool in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5D9602E1208627E500FEDE94 /* com.zxzerster.SS-Client.HelperTool */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5DCB6778207F86D6002C6F18 /* ProxySetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCB6777207F86D6002C6F18 /* ProxySetter.m */; };
@@ -104,6 +106,8 @@
 		5D5CDC6F207CFC190053DD36 /* NetworkProxySetter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetworkProxySetter; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5CDC71207CFC190053DD36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D5CDC78207CFD490053DD36 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5D8F9FA520877713008B8AAC /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		5D8F9FA620877713008B8AAC /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		5D9602E1208627E500FEDE94 /* com.zxzerster.SS-Client.HelperTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "com.zxzerster.SS-Client.HelperTool"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D9602E3208627E600FEDE94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D9602EC20862B3600FEDE94 /* HelperTool-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelperTool-Info.plist"; sourceTree = "<group>"; };
@@ -174,6 +178,15 @@
 			path = NetworkProxySetter;
 			sourceTree = "<group>";
 		};
+		5D8F9FA82087771A008B8AAC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5D8F9FA520877713008B8AAC /* Utils.h */,
+				5D8F9FA620877713008B8AAC /* Utils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		5D9602E2208627E600FEDE94 /* HelperTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				5DF063A9207B9CA700790148 /* LaunchHelperTool.xcodeproj */,
+				5D8F9FA82087771A008B8AAC /* Utils */,
 				5DFF3FDF207B89910008D219 /* SS-Client */,
 				5D5CDC70207CFC190053DD36 /* NetworkProxySetter */,
 				5D9602E2208627E600FEDE94 /* HelperTool */,
@@ -374,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8F9FA920877931008B8AAC /* NetworkProxySetter in Resources */,
 				5DFF3FE4207B89910008D219 /* Assets.xcassets in Resources */,
 				5DFF3FE7207B89910008D219 /* MainMenu.xib in Resources */,
 			);
@@ -488,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8F9FA720877713008B8AAC /* Utils.m in Sources */,
 				5DFF3FEA207B89910008D219 /* main.m in Sources */,
 				5DFF3FE2207B89910008D219 /* AppDelegate.m in Sources */,
 			);

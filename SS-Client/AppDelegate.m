@@ -16,10 +16,10 @@
 @interface AppDelegate () {
     NSStatusItem* _statusItem;
     AuthorizationRef _authRef;
-    NSXPCConnection* _xpcConnection;
 }
 
 @property (weak) IBOutlet NSMenu *menu;
+@property (strong, readonly) NSXPCConnection* xpcConnection;
 
 @end
 
@@ -30,6 +30,7 @@
     OSStatus status = AuthorizationCreate(NULL, kAuthorizationEmptyEnvironment, flags, &_authRef);
     assert(status == errAuthorizationSuccess);
     
+    // SMJobBless will return YES if HelperTool is already there.
     CFErrorRef error;
     BOOL ret = SMJobBless(kSMDomainSystemLaunchd, CFSTR("com.zxzerster.SS-Client.HelperTool"), _authRef, &error);
     if (!ret) {
@@ -37,25 +38,8 @@
         assert(NO);
         exit(EXIT_FAILURE);
     }
-    
-    _xpcConnection = [[NSXPCConnection alloc] initWithMachServiceName: kHelperToolMachServiceName options: NSXPCConnectionPrivileged];
-    _xpcConnection.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol: @protocol(HelperToolProtocol)];
-    _xpcConnection.invalidationHandler = ^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"++++++++++   Error here!");
-        });
-    };
-    
-    //----------   Test code
-    [_xpcConnection resume];
-    NSLog(@"Calling remote object...");
-    [[_xpcConnection remoteObjectProxyWithErrorHandler:^(NSError * _Nonnull error) {
-        NSLog(@"==========   error handler here!");
-    }] installProxySetterAtPath: @"Install Tool Path" withReply:^(BOOL success, NSString* msg, NSError* error) {
-        NSLog(@"==========    Message: %@", msg);
-    }];
-    NSLog(@"Calling finished");
-    //----------   Test code
+
+    [self installNetworkTool];
     
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength: NSVariableStatusItemLength];
     NSImage* statusItemIcon = [NSImage imageNamed: @"MenuIcon"];
@@ -135,6 +119,76 @@
     [self tryTerminatedLaunchHelper];
     
     return ret;
+}
+
+- (IBAction)turnOff:(id)sender {
+    NSLog(@"User click Turn off menu item");
+    [[self.xpcConnection remoteObjectProxyWithErrorHandler:^(NSError * _Nonnull error) {
+        // TODO: Show some error info to user
+    }] turnOffProxyWithReply:^(BOOL success, NSError *error) {
+        if (!success) {
+            // TODO: Show some error info to user
+            return;
+        }
+        
+        NSLog(@"Turned off proxy setting");
+    }];
+}
+
+- (IBAction)globalMode:(id)sender {
+    NSLog(@"User click global mode menu item");
+    [[self.xpcConnection remoteObjectProxyWithErrorHandler:^(NSError * _Nonnull error) {
+        // TODO: Show some error info to user
+    }] setGlobalModeWithReply:^(BOOL success, NSError *error) {
+        if (!success) {
+            // TODO: Show some error info to user
+            return;
+        }
+        
+        NSLog(@"Global network proxy set successfully");
+    }];
+}
+
+- (NSXPCConnection *)xpcConnection {
+    static NSXPCConnection* connection;
+    if (!connection) {
+        connection = [[NSXPCConnection alloc] initWithMachServiceName: kHelperToolMachServiceName options: NSXPCConnectionPrivileged];
+        connection.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol: @protocol(HelperToolProtocol)];
+        connection.invalidationHandler = ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // TODO: figure out what's the purpose of thie handler and add invalidation handler here.
+            });
+        };
+        
+        [connection resume];
+    }
+    
+    return connection;
+}
+
+- (void)installNetworkTool {
+    // Install network tool only if it's not there
+    NSFileManager* fs = [NSFileManager defaultManager];
+    NSString* localLibPath = [[[fs URLsForDirectory: NSLibraryDirectory inDomains: NSLocalDomainMask] lastObject] path];
+    
+    NSString* toolPath = [[[[localLibPath stringByAppendingPathComponent: @"Application Support"] stringByAppendingPathComponent: @"com.zxzerster.SS-Client"] stringByAppendingPathComponent: @"Tools"] stringByAppendingPathComponent: @"NetworkTool"];
+    if (![fs fileExistsAtPath: toolPath isDirectory: nil]) {
+        // Let's install the tool
+        NSString* srcPath = [[NSBundle mainBundle] pathForResource: @"NetworkProxySetter" ofType: nil];
+        assert(srcPath);
+        [[self.xpcConnection remoteObjectProxyWithErrorHandler:^(NSError * _Nonnull error) {
+            
+        }] installNetworkToolAtSourcePath: srcPath withReply:^(BOOL success, NSString *message, NSError *error) {
+            if (!success) {
+                // TODO: show users some critical error message, liek try to re-install the application
+                NSLog(@"Error: %@", [error localizedDescription]);
+            }
+        }];
+        
+        return;
+    }
+    
+    
 }
 
 @end

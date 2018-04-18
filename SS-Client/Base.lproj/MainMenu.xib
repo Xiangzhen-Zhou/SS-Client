@@ -25,7 +25,20 @@
                         <action selector="startupAtLogin:" target="Voe-Tx-rLC" id="9I1-wY-Vwz"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Turn off" id="q8A-Jc-0Jq">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="turnOff:" target="Voe-Tx-rLC" id="zbR-O0-vZU"/>
+                    </connections>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" id="DYr-g2-qv6"/>
+                <menuItem title="Global mode" id="DNj-qP-Dmy">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="globalMode:" target="Voe-Tx-rLC" id="UIN-W0-NY4"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="X9T-FE-hWp"/>
                 <menuItem title="Quit" id="alQ-AE-V8H">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>

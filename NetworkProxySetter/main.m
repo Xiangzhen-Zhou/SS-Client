@@ -80,14 +80,16 @@ int main(int argc, const char * argv[]) {
             exit(ERR_OPTIONS);
         }
         
-        [proxySetter saveProxies];
-        [proxySetter emptyProxies];
+//        [proxySetter saveProxies];
+//        [proxySetter emptyProxies];
         if ([mode isEqualToString: @"auto"]) {
             [proxySetter setPacEnabled: YES UrlString: pacUrl];
         } else if ([mode isEqualToString: @"global"]) {
             [proxySetter setProxyForProtocol: @"Socks" Enabled: YES Url: @"127.0.0.1" Port: [port integerValue]];
         } else if ([mode isEqualToString: @"off"]) {
-            [proxySetter restoreProxies];
+            // Let's think carefully how to retore proxy set before, for now, just empty it.
+//            [proxySetter restoreProxies];
+            [proxySetter emptyProxies];
         }
     }
     return 0;
