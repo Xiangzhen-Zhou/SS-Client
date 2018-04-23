@@ -13,7 +13,7 @@
 
 #define VER_STRING  @"0.1"
 
-#define ERR_OPTIONS 0x100
+#define ERR_OPTIONS -0x100
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -83,8 +83,10 @@ int main(int argc, const char * argv[]) {
 //        [proxySetter saveProxies];
 //        [proxySetter emptyProxies];
         if ([mode isEqualToString: @"auto"]) {
+            [proxySetter emptyProxies];
             [proxySetter setPacEnabled: YES UrlString: pacUrl];
         } else if ([mode isEqualToString: @"global"]) {
+            [proxySetter emptyProxies];
             [proxySetter setProxyForProtocol: @"Socks" Enabled: YES Url: @"127.0.0.1" Port: [port integerValue]];
         } else if ([mode isEqualToString: @"off"]) {
             // Let's think carefully how to retore proxy set before, for now, just empty it.

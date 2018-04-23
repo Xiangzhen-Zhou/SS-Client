@@ -149,6 +149,20 @@
     }];
 }
 
+- (IBAction)pacMode:(id)sender {
+    NSLog(@"User click pac mode menu item");
+    [[self.xpcConnection remoteObjectProxyWithErrorHandler:^(NSError * _Nonnull error) {
+        // TODO: Show some error info to user
+    }] setPacModeWithReply:^(BOOL success, NSError *error) {
+        if (!success) {
+            // TODO: Show some error info to user
+            return;
+        }
+        
+        NSLog(@"Pac network proxy set successfully");
+    }];
+}
+
 - (NSXPCConnection *)xpcConnection {
     static NSXPCConnection* connection;
     if (!connection) {

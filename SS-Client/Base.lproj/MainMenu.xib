@@ -32,6 +32,12 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="DYr-g2-qv6"/>
+                <menuItem title="Pac mode" id="fBV-hy-HVD">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="pacMode:" target="Voe-Tx-rLC" id="7Xe-Zw-dFC"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Global mode" id="DNj-qP-Dmy">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>

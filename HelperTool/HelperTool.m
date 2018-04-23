@@ -20,8 +20,12 @@
 @property (strong) NSXPCListener* listener;
 
 @property (copy, readonly) NSString* localLibPath;
+@property (copy, readonly) NSString* launchPath;
 
 @end
+
+#define NETWORKTOOL_DOMAIN @"com.zxzerster.SS-Clinet.NetworkProxySetter"
+#define ERR_NETWORKTOOL  -0x201
 
 @implementation HelperTool
 
@@ -43,6 +47,45 @@
 - (NSString *)localLibPath {
     NSFileManager* fs = [NSFileManager defaultManager];
     return [[[fs URLsForDirectory: NSLibraryDirectory inDomains: NSLocalDomainMask] lastObject] path];
+}
+
+- (NSString *)launchPath {
+    static NSString* launchPath;
+    if (!launchPath) {
+        NSFileManager* fs = [NSFileManager defaultManager];
+        NSString* libPath = [[[fs URLsForDirectory: NSLibraryDirectory inDomains: NSLocalDomainMask] lastObject] path];
+        launchPath = [[[[libPath stringByAppendingPathComponent: @"Application Support"] stringByAppendingPathComponent: @"com.zxzerster.SS-Client"] stringByAppendingPathComponent: @"Tools"] stringByAppendingPathComponent: @"NetworkTool"];
+    }
+    
+    return launchPath;
+}
+
+- (int)launchNetworkProxySetterWithArguments: (NSArray *)arguments withError: (NSError** )err {
+    assert(arguments && arguments.count > 0);
+    NSTask* task = [[NSTask alloc] init];
+    
+    task.launchPath = self.launchPath;
+    task.arguments = arguments;
+    
+    NSPipe* pipe = [NSPipe pipe];
+    [task setStandardOutput: pipe];
+    
+    [task launch];
+    [task waitUntilExit];
+    int status = [task terminationStatus];
+    
+    NSFileHandle* readHandle = [pipe fileHandleForReading];
+    NSData* ret = [readHandle readDataToEndOfFile];
+    NSString* msg = [[NSString alloc] initWithData: ret encoding: NSUTF8StringEncoding];
+    
+    if (ret != 0) {
+        NSError* error = [NSError errorWithDomain: NETWORKTOOL_DOMAIN code: ERR_NETWORKTOOL userInfo: @{NSLocalizedDescriptionKey: msg}];
+        if (*err) {
+            *err = error;
+        }
+    }
+    
+    return status;
 }
 
 - (BOOL)listener:(NSXPCListener *)listener shouldAcceptNewConnection:(NSXPCConnection *)newConnection {
@@ -96,45 +139,25 @@
 }
 
 - (void)setGlobalModeWithReply:(void (^)(BOOL, NSError *))reply {
-    NSTask* task = [[NSTask alloc] init];
-    NSString* launchPath = [[[[self.localLibPath stringByAppendingPathComponent: @"Application Support"] stringByAppendingPathComponent: @"com.zxzerster.SS-Client"] stringByAppendingPathComponent: @"Tools"] stringByAppendingPathComponent: @"NetworkTool"];
+    NSError* error;
+    int status;
     
-    task.launchPath = launchPath;
-    task.arguments = @[@"-m", @"global", @"-p", @"10086"];
+    status = [self launchNetworkProxySetterWithArguments: @[@"-m", @"global", @"-p", @"10086"] withError: &error];
+    reply(status == 0, error);
+}
 
-    NSPipe* pipe = [NSPipe pipe];
-    [task setStandardOutput: pipe];
+- (void)setPacModeWithReply:(void (^)(BOOL, NSError *))reply {
+    NSError* error;
+    int status;
     
-    [task launch];
-    [task waitUntilExit];
-    int status = [task terminationStatus];
-    
-    NSFileHandle* readHandle = [pipe fileHandleForReading];
-    NSData* ret = [readHandle readDataToEndOfFile];
-    NSString* msg = [[NSString alloc] initWithData: ret encoding: NSUTF8StringEncoding];
-    
-    reply(status == 0 ? YES : NO, nil);
+    status = [self launchNetworkProxySetterWithArguments: @[@"-m", @"auto", @"-u", @"http://test-pac-url.com"] withError: &error];
+    reply(status == 0, error);
 }
 
 - (void)turnOffProxyWithReply:(void (^)(BOOL, NSError *))reply {
-    NSTask* task = [[NSTask alloc] init];
-    NSString* launchPath = [[[[self.localLibPath stringByAppendingPathComponent: @"Application Support"] stringByAppendingPathComponent: @"com.zxzerster.SS-Client"] stringByAppendingPathComponent: @"Tools"] stringByAppendingPathComponent: @"NetworkTool"];
-    
-    task.launchPath = launchPath;
-    task.arguments = @[@"-m", @"off"];
-    
-    NSPipe* pipe = [NSPipe pipe];
-    [task setStandardOutput: pipe];
-    
-    [task launch];
-    [task waitUntilExit];
-    int status = [task terminationStatus];
-    
-    NSFileHandle* readHandle = [pipe fileHandleForReading];
-    NSData* ret = [readHandle readDataToEndOfFile];
-    NSString* msg = [[NSString alloc] initWithData: ret encoding: NSUTF8StringEncoding];
-    
-    reply(status == 0 ? YES : NO, nil);
+    NSError* error;
+    int status = [self launchNetworkProxySetterWithArguments: @[@"-m", @"off"] withError: &error];
+    reply(status == 0, error);
 }
 
 @end
